@@ -17,7 +17,7 @@
     "build": "rm -rf dist && rm -rf types && tsc -p tsconfig.cjs.json && tsc -p tsconfig.esm.json",
     "commit": "git-cz",
     "prepare": "npm run build",
-    "test": "./node_modules/.bin/vitest ./src --run --maxConcurrency 1",
+    "test": "./node_modules/.bin/vitest ./src --run --maxConcurrency 2",
     "lint": "eslint .",
     "format": "prettier --write src/**/*.ts"
   },
