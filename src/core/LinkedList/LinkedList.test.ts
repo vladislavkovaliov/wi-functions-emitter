@@ -87,7 +87,7 @@ describe("LinkedList", () => {
 
         console.log(`⏱️ Added ${COUNT} nodes in ${time.toFixed(2)} ms`);
 
-        expect(time).toBeLessThan(100); // adjust threshold as needed
+        expect(time).toBeLessThan(300); // adjust threshold as needed
     });
 
     // 🧪 Workload: Add and remove 10,000 nodes

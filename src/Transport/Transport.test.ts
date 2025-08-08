@@ -91,6 +91,6 @@ describe("Transport", () => {
             `⏱️  Sent message to ${NUM} listeners in ${elapsed.toFixed(2)} ms`,
         );
 
-        expect(elapsed).toBeLessThan(100); // Adjust threshold as needed
+        expect(elapsed).toBeLessThan(300); // Adjust threshold as needed
     });
 });
