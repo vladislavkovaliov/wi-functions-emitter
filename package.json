@@ -1,0 +1,48 @@
+{
+  "name": "wi-functions-emitter",
+  "version": "0.0.0-development",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/esm/index.js"
+    }
+  },
+  "scripts": {
+    "build:cjs": "tsc -p tsconfig.cjs.json && tsc-alias -p tsconfig.cjs.json",
+    "build:esm": "tsc -p tsconfig.esm.json && tsc-alias -p tsconfig.esm.json",
+    "build": "rm -rf dist && rm -rf types && tsc -p tsconfig.cjs.json && tsc -p tsconfig.esm.json",
+    "commit": "git-cz",
+    "prepare": "npm run build",
+    "test": "./node_modules/.bin/vitest ./src --run --maxConcurrency 1",
+    "lint": "eslint .",
+    "format": "prettier --write src/**/*.ts"
+  },
+  "keywords": [
+    "function",
+    "emit"
+  ],
+  "author": "Vlad (v.v.kovaliov@gmail.com)",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^9.32.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-perfectionist": "^4.15.0",
+    "eslint-plugin-prettier": "^5.5.3",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
+    "prettier": "^3.6.2",
+    "semantic-release": "^24.2.6",
+    "ts-node": "^10.9.2",
+    "tsc-alias": "^1.8.16",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.38.0",
+    "vitest": "^3.2.4"
+  }
+}
